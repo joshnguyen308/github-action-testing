@@ -24,7 +24,7 @@ jobs:
           print (platform.processor())
         shell: python
       - name: detect number of processer
-        run: cat ../../processor.py
+        run: cat processor.py
 
   run-windows-command:
     runs-on: windows-latest
