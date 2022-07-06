@@ -26,8 +26,9 @@ jobs:
       # - name: detect number of processer
       #   run: python ../../processor.py
       - name: list files
-        run: ls -lha
-        run: pwd
+        run: |
+          ls -lha
+          pwd
 
   run-windows-command:
     runs-on: windows-latest
