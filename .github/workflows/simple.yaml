@@ -16,6 +16,10 @@ jobs:
           node -v
           npm -v
       - name: run on python shell
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.5" # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          architecture: "x64" # optional x64 or x86. Defaults to x64 if not specified
         run: |
           import platform
           print (platform.processor())
