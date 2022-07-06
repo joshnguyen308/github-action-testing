@@ -29,6 +29,7 @@ jobs:
         run: |
           ls -lha
           pwd
+          ls -lha ../
 
   run-windows-command:
     runs-on: windows-latest
