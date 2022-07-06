@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   run-shell-command:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: echo a string
         run: echo "hello world"
@@ -15,9 +15,9 @@ jobs:
         run: |
           node -v
           npm -v
-      - uses: actions/setup-python@v4
-        with:
-          python-version: "pypy3.9"
+      # - uses: actions/setup-python@v4
+      #   with:
+      #     python-version: "pypy3.9"
       - name: run on python shell
         run: |
           import platform
@@ -25,8 +25,10 @@ jobs:
         shell: python
       - name: detect number of processer
         run: cat ../../processor.py
-  # run-windows-command:
-  #   runs-on: windows-latest
-  #   steps:
-  #     - name: Directory Shell
-  #       run: Get-Location
+
+  run-windows-command:
+    runs-on: windows-latest
+    needs: [run-shell-command]
+    steps:
+      - name: Directory Shell
+        run: Get-Location
