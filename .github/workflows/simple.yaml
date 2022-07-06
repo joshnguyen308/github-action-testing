@@ -17,7 +17,7 @@ jobs:
           npm -v
       - uses: actions/setup-python@v4
         with:
-          python-version: "2.7"
+          python-version: "3.11.0"
           architecture: "x64"
       - name: run on python shell
         run: |
