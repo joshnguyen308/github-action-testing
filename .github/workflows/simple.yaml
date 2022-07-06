@@ -5,7 +5,7 @@ on: [push]
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
-    step:
+    steps:
       - name: echo a string
         run: echo "hello world"
       - name: multiline
