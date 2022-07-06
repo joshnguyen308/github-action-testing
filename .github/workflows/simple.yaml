@@ -27,6 +27,7 @@ jobs:
       #   run: python ../../processor.py
       - name: list files
         run: ls -lha
+        run: pwd
 
   run-windows-command:
     runs-on: windows-latest
