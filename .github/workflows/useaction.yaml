@@ -1,0 +1,12 @@
+name: Using Action
+
+on: [push]
+
+jobs:
+  run-shell-command:
+    runs-on: self-host
+    steps:
+      - name: checkout
+      - uses: actions/checkout@v3
+      - name: list directory
+        run: ls -lha
