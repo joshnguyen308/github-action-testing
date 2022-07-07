@@ -1,7 +1,8 @@
 name: Using Action
 
 on:
-  push:
+  schedule:
+    - cron: "1 * * * *"
   pull_request:
     type: [closed, completed, reopened]
 
