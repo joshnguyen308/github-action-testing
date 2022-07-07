@@ -3,7 +3,7 @@ name: Using Action
 on:
   push:
   pull_request:
-    type: [closed, completed]
+    type: [closed, completed, reopened]
 
 jobs:
   run-shell-command:
