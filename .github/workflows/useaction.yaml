@@ -11,6 +11,9 @@ jobs:
       - name: list directory
         run: ls -lha
       - name: simple nodejs action
+        id: first_step
         uses: actions/hello-world-javascript-action@ab59b778e5d5349998ed92edbc168703d3a66512
         with:
           who-to-greet: "MOca"
+      - name: logs Greetins
+        run: echo "${{ steps.first_step.outputs.time }}"
