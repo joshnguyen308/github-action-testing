@@ -1,6 +1,8 @@
 name: Using Action
 
-on: [push]
+on:
+  push:
+  pull_request: [closed, completed]
 
 jobs:
   run-shell-command:
