@@ -10,3 +10,7 @@ jobs:
         uses: actions/checkout@v3
       - name: list directory
         run: ls -lha
+      - name: simple nodejs action
+        uses: actions/hello-world-javascript-action@ab59b778e5d5349998ed92edbc168703d3a66512
+        with:
+          who-to-greet: "MOca"
