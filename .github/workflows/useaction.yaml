@@ -17,3 +17,8 @@ jobs:
           who-to-greet: "MOca"
       - name: logs Greetins
         run: echo "${{ steps.first_step.outputs.time }}"
+      - name: github default variable
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
