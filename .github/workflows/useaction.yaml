@@ -19,6 +19,6 @@ jobs:
         run: echo "${{ steps.first_step.outputs.time }}"
       - name: github default variable
         run: |
-          echo $GITHUB_SHA
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_WORKSPACE
+          echo "Github sha: $GITHUB_SHA"
+          echo "Github repository: $GITHUB_REPOSITORY"
+          echo "Github workspace: $GITHUB_WORKSPACE"
